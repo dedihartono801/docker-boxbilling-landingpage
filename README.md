@@ -1,10 +1,10 @@
 Cara running docker-compose boxbilling dan landing page
 
 Running di background atau diamond: <br>
-<i>docker-compose up -d</i> 
+<i><b>docker-compose up -d</b></i> 
 
 Stop container sekaligus menghapus container: <br>
-<i>docker-compose down</i> 
+<i><b>docker-compose down</b></i> 
 
 Stop container: <br>
-<i>docker-compose stop</i> 
+<i><b>docker-compose stop</b></i> 
