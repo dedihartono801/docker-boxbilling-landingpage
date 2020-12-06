@@ -1,4 +1,4 @@
 Cara running docker-compose boxbilling dan landing page
 
-untuk menjalankan docker sebagai diamond
+running di background atau diamond: <br>
 docker-compose up -d 
