@@ -1,0 +1,53 @@
+version: '3.8'
+services:
+  boxbilling:
+    build: ./boxbilling
+    image: boxbilling
+    container_name: boxbilling
+    volumes:
+    - ./boxbilling:/var/www/html
+    environment:
+      DB_HOST: database
+      DB_NAME: boxbilling
+      DB_USER: root
+      DB_PASS: qwaszx123
+    depends_on:
+    - database
+    networks:
+    - boxbilling-network
+    ports:
+    - 8004:80
+  landing_page:
+    build: ./landing-page
+    image: landing_page
+    container_name: landing_page
+    volumes:
+    - ./landing-page:/var/www/html
+    networks:
+    - boxbilling-network
+    ports:
+    - 8005:80
+  database:
+    image: mysql:8.0
+    container_name: database
+    volumes: 
+       - dbdata:/var/lib/mysql
+       - ./boxbilling/install/structure.sql:/docker-entrypoint-initdb.d/astructure.sql
+       - ./boxbilling/install/content.sql:/docker-entrypoint-initdb.d/content.sql
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: qwaszx123
+      MYSQL_DATABASE: boxbilling
+    networks:
+      boxbilling-network:
+
+networks:
+  boxbilling-network:
+    driver: bridge
+
+#Volumes
+volumes:
+  dbdata:
+    driver: local
