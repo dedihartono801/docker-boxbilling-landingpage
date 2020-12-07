@@ -22,8 +22,8 @@ Buka link di bawah untuk landing page: <br>
 <i><b>http://localhost:8005</b></i> 
 
 Credential database mysql: <br>
-<i><b>Database Name: boxbilling</b></i> 
-<i><b>Host: localhost</b></i> 
-<i><b>User: root</b></i> 
-<i><b>password: qwaszx123</b></i> 
+<i><b>Database Name: boxbilling</b></i><br> 
+<i><b>Host: localhost</b></i><br> 
+<i><b>User: root</b></i><br> 
+<i><b>password: qwaszx123</b></i><br> 
 <i><b>port: 3306</b></i> 
