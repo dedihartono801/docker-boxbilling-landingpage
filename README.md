@@ -14,3 +14,9 @@ Stop container sekaligus menghapus container: <br>
 
 Stop container: <br>
 <i><b>docker-compose stop</b></i> 
+
+Buka link di bawah untuk boxbilling: <br>
+<i><b>http://localhost:8004</b></i> 
+
+Buka link di bawah untuk landing page: <br>
+<i><b>http://localhost:8005</b></i> 
